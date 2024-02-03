@@ -7,7 +7,7 @@ type bill struct { //definimos el nombre de la estructura y sus parametros
 }
 
 // make new bills
-func createBill(name string) bill { //constructor de la estructura
+func newBill(name string) bill { //constructor de la estructura
 	b := bill{
 		name:  name,
 		items: map[string]float64{},
