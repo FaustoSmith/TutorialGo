@@ -47,16 +47,30 @@ func main() {
 	age := 30
 	name := "Fausto"
 	salary := 1200.5378
+	casado := true
 
 	fmt.Print("Hello, ")
 	fmt.Print("world! \n")
 	fmt.Print("!!\n")
 	fmt.Print("My age is", age, "and my name is", name, "\n")
 
-	fmt.Printf("My age is %v and my name is %v", age, name)                              //%v es el generico,toma el valor por defecto de la variable
-	fmt.Printf("My age is %v and my name is %s", age, name)                              //%s es para interpolar un string
-	fmt.Printf("My age is %d and my name is %v", age, name)                              //%d interpolar un entero en lugar de que salga como binario
-	fmt.Printf("My age is %v , my name is %v and  my salary is %f", age, name, salary)   //f interpolar un float
-	fmt.Printf("My age is %v , my name is %v and  my salary is %.2f", age, name, salary) //f interpolar un float, el .2 lo redondea
+	fmt.Printf("My age is %v and my name is %v \n", age, name)                              //%v es el generico,toma el valor por defecto de la variable
+	fmt.Printf("My age is %v and my name is %s \n", age, name)                              //%s es para interpolar un string
+	fmt.Printf("My age is %d and my name is %v \n", age, name)                              //%d interpolar un entero en lugar de que salga como binario
+	fmt.Printf("My age is %v , my name is %v and  my salary is %f \n", age, name, salary)   //f interpolar un float
+	fmt.Printf("My age is %v , my name is %v and  my salary is %.2f \n", age, name, salary) //f interpolar un float, el .2 lo redondea
+	fmt.Printf("age is type %T \n", age)                                                    //%T tipo de dato de la variable
+	fmt.Printf("My age is %+v \n", age)                                                     //%+v incluye el nombre de la variable en caso de ser una estructura
+	fmt.Printf("age is type %T \n", age)                                                    //%T tipo de dato de la variable
+	fmt.Printf("is marry %t \n", casado)                                                    //%t interpolar booleano
+	fmt.Printf(" age in binary code %b \n", age)                                            //%b representacion binaria
+	fmt.Printf("my age in char is %c \n", age)                                              //%c caracter correspondiente a un numero
+	fmt.Printf(" age in hex code %x \n", age)                                               //%b representacion hexadecimal
+	fmt.Printf(" my name in double-quote %q \n", name)                                      //%q mostrar string entre comillas
+	fmt.Printf(" age pointer is %p", &age)                                                  //%p mostrar puntero
+	fmt.Printf(" age pointer is %p", &age)                                                  //%p mostrar puntero
+	fmt.Printf(" show  coquette age width:|%6d|", age)                                      //width:|%6d| mostrar la edad controlando el width en la vista
+	s := fmt.Sprintf("creating string without saying I have %d years", age)                 //save formatted strings
+	fmt.Println(s)
 
 }
